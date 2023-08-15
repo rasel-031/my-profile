@@ -3,17 +3,17 @@ import pp from "../assets/images/rasel.jpg";
 
 const About = () => {
   return (
-    <div className="px-[23vw] bg-customBlue">
+    <div className="px-[10vw] bg-customBlue lg:px-[12vw] xl:px-[18vw]">
       <div className="flex items-center px-0 py-10 ">
-        <span className="text-customGreen text-2xl font-mono">01.</span>
+        <span className="text-customGreen text-lg sm:text-2xl font-mono">01.</span>
         <div className="flex items-center">
-          <span className="px-4 text-3xl font-bold text-customLight">
+          <span className="px-4 text-xl sm:text-3xl font-bold text-customLight">
             About Me
           </span>
-          <div className="h-0.5 w-60 bg-customSlate"></div>
+          <div className="h-0.5 w-[15vw] bg-customSlate"></div>
         </div>
       </div>
-      <div className="flex text-customSlate ">
+      <div className="flex flex-col text-customSlate gap-12 text-sm md:text-base lg:flex-row">
         <div className="flex flex-col gap-3 ">
           <div className="text-justify ">
             <p>
@@ -58,10 +58,10 @@ const About = () => {
           </div>
         </div>
         {/* image div */}
-        <div className="ml-8 flex">
-          <div className="w-[15vw] h-[30vh]  outline outline-2 rounded relative z-0 translate-x-3 translate-y-3 outline-customGreen"></div>
-          <div className="w-[15vw] h-[30vh]  absolute z-20 hover:-translate-x-1 hover:-translate-y-1">
-            <img src={pp} alt="profile.jpg" className="w-[15vw] h-[30vh] rounded " />
+        <div className="flex justify-center lg:ml-8">
+          <div className="w-60 h-60 sm:w-80 sm:h-80  outline outline-2 rounded relative z-0 translate-x-3 translate-y-3 outline-customGreen"></div>
+          <div className="w-60 h-60 sm:w-80 sm:h-80  absolute z-20 hover:-translate-x-1 hover:-translate-y-1">
+            <img src={pp} alt="profile.jpg" className="w-60 h-60 sm:w-80 sm:h-80 rounded " />
           </div>
         </div>
       </div>

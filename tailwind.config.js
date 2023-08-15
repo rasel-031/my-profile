@@ -10,6 +10,7 @@ module.exports = {
         customGreen: '#64ffda',
         customLight: '#ccd6f6',
         customSlate: '#8892b0',
+        customNavy: '#112240',
       },
       fontFamily:{
         mono: ['SF Mono','Fira Code','Fira Mono,Roboto Mono','monospace'],

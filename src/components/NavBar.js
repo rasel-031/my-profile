@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import Navigation from "./Navigation";
+import { IoIosMenu } from "react-icons/io";
+import NavDrawer from "./NavDrawer";
 
 const NavBar = () => {
-  const scrollToSection = (e, sectionId) => {
-    e.preventDefault();
-    const targetSection = document.querySelector(sectionId);
-    if (targetSection) {
-      window.scrollTo({
-        top: targetSection.offsetTop,
-        behavior: "smooth",
-      });
-    }
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const toggleMenuClose = () => {
+    setIsOpen(false);
   };
 
   const scrollToTop = () => {
+    setIsOpen(false);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -21,49 +24,36 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-between px-16 py-5 bg-customBlue ">
+      <div className="flex items-center justify-between px-[10vw] md:px-16 py-5 bg-customBlue ">
         <div className="font-mono font-bold text-customLight flex justify-center">
           <a
             href="#top"
             onClick={scrollToTop}
-            className=" flex items-center justify-center w-10 h-10 transform rotate-45 rounded outline outline-2 outline-customGreen"
+            className=" flex items-center justify-center w-8 h-8 md:w-10 md:h-10 transform rotate-45 rounded outline outline-2 outline-customGreen"
           >
-            <span className="transform -rotate-45 font-sans text-xl text-customGreen">
+            <span className="transform -rotate-45 font-sans text-sm md:text-xl text-customGreen">
               RB
             </span>
           </a>
         </div>
-        <div className="flex items-center justify-between font-mono font-bold">
-          <div className="flex items-center justify-between text-customLight">
-            <div className="px-4 hover:text-customGreen">
-              <span className="text-customGreen">1.</span>
-              <a href="#about" onClick={(e) => scrollToSection(e, "#about")}>
-                &nbsp;About
-              </a>
-            </div>
-            <div className="px-4 hover:text-customGreen">
-              <span className="text-customGreen">2.</span>
-              <a href="#experience">&nbsp;Experience</a>
-            </div>
-            <div className="px-4 hover:text-customGreen">
-              <span className="text-customGreen">3.</span>
-              <a href="#work">&nbsp;Work</a>
-            </div>
-            <div className="px-4 hover:text-customGreen">
-              <span className="text-customGreen">4.</span>
-              <a href="#about">&nbsp;Contact</a>
-            </div>
-          </div>
-          <div className="ml-4">
-            {/* osthir button start*/}
-            <div className=" transition-transform transform translate-y-0 translate-x-0 bg-customGreen rounded">
-              <button className="font-mono px-4 py-2 text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1">
-                Resume
-              </button>
-            </div>
-            {/* osthir button end*/}
-          </div>
+        {/* for mobile screen */}
+        <div className="block md:hidden">
+          <button onClick={toggleMenu} className="text-customGreen text-4xl">
+            <IoIosMenu />
+          </button>
         </div>
+
+        {/* right drawer */}
+        <div className={isOpen ? "fixed z-50 top-0 right-0 " : "hidden"}>
+          <NavDrawer onChildToggleClick={toggleMenuClose} />
+        </div>
+        {/* for mobile screen */}
+
+        {/* for tablet to upper screen */}
+        <div className="hidden md:block">
+          <Navigation />
+        </div>
+        {/* for tablet to upper screen */}
       </div>
     </div>
   );

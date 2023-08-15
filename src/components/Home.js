@@ -22,11 +22,9 @@ const Home = () => {
     };
   });
 
-
-
   return (
     <div id="top">
-      <div className={showNavbar ? "fixed z-50 right-0 left-0 opacity-90 transition transform duration-300 ease-in-out shadow-xl" : "-mt-28 opacity-10"}>
+      <div className={showNavbar ? "fixed z-40 right-0 left-0 opacity-90 transition transform duration-300 ease-in-out shadow-xl" : "-mt-28 opacity-10"}>
         <NavBar />
       </div>
       <div>
