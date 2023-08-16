@@ -4,7 +4,7 @@ const Contact = () => {
 
   return (
     <div className="bg-customBlue ">
-      <div className="flex flex-col items-center justify-center gap-4 py-32 mx-[10vw] md:mx-[15vw] xl:mx-[30vw]">
+      <div className="flex flex-col items-center justify-center gap-4 pb-32 mx-[10vw] md:mx-[15vw] xl:mx-[30vw]">
         <div className="flex gap-3 text-customGreen text-sm md:text-lg">
           <span>04.</span>
           <p>What’s Next?</p>
@@ -14,7 +14,7 @@ const Contact = () => {
         </div>
         <div className="text-justify text-customSlate text-sm md:text-base">
           <p>
-            Although I’m not currently looking for any new opportunities, my
+            Although I’m currently looking for any new opportunities, my
             inbox is always open. Whether you have a question or just want to
             say hi, I’ll try my best to get back to you!
           </p>

@@ -3,8 +3,7 @@ import { RxCross1 } from "react-icons/rx";
 import OutsideClickHandler from "react-outside-click-handler";
 
 const NavDrawer = ({ onChildToggleClick }) => {
-
-    //scroll code
+  //scroll code
   const handleScroll = () => {
     if (window.scrollY > 0) {
       // call child component
@@ -17,7 +16,7 @@ const NavDrawer = ({ onChildToggleClick }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
 
   //section code
   const scrollToSection = (e, sectionId) => {
@@ -32,6 +31,12 @@ const NavDrawer = ({ onChildToggleClick }) => {
         behavior: "smooth",
       });
     }
+  };
+
+  //resume download
+  const handleDownload = () => {
+    const resumeUrl = "/resume/rasel-bishwas.pdf";
+    window.open(resumeUrl, "_blank");
   };
 
   return (
@@ -84,7 +89,10 @@ const NavDrawer = ({ onChildToggleClick }) => {
             <div className="mt-8">
               {/* osthir button start*/}
               <div className=" transition-transform transform translate-y-0 translate-x-0 bg-customGreen rounded">
-                <button className="font-mono px-4 py-2 text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1">
+                <button
+                  onClick={handleDownload}
+                  className="font-mono px-4 py-2 text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1"
+                >
                   Resume
                 </button>
               </div>

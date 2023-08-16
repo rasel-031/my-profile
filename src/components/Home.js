@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import LandingPage from "../pages/LandingPage";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import Experience from "../pages/Experience";
 
 const Home = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -23,7 +24,7 @@ const Home = () => {
   });
 
   return (
-    <div id="top">
+    <div id="top" className="bg-customBlue">
       <div className={showNavbar ? "fixed z-40 right-0 left-0 opacity-90 transition transform duration-300 ease-in-out shadow-xl" : "-mt-28 opacity-10"}>
         <NavBar />
       </div>
@@ -32,6 +33,9 @@ const Home = () => {
       </div>
       <div id="about">
         <About/>
+      </div>
+      <div id="experience">
+        <Experience/>
       </div>
       <div id="contact">
         <Contact/>

@@ -17,10 +17,10 @@ const LandingPage = () => {
             designing) exceptional digital experiences. I love programming.
           </p>
         </div>
-        <div className="w-48 md:w-52">
+        <div className="flex items-start">
           {/* osthir button start*/}
           <div className=" transition-transform transform translate-y-0 translate-x-0 bg-customGreen rounded">
-            <button className="px-4 py-2 md:px-6 md:py-4 font-mono  text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1">
+            <button className="px-4 py-2 truncate md:px-6 md:py-4 font-mono  text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1">
               Check out my work!
             </button>
           </div>
