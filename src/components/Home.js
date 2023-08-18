@@ -5,6 +5,8 @@ import LandingPage from "../pages/LandingPage";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Experience from "../pages/Experience";
+import Work from "../pages/Work";
+import Footer from "../pages/Footer";
 
 const Home = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -24,11 +26,11 @@ const Home = () => {
   });
 
   return (
-    <div id="top" className="bg-customBlue">
+    <div className="bg-customBlue">
       <div className={showNavbar ? "fixed z-40 right-0 left-0 opacity-90 transition transform duration-300 ease-in-out shadow-xl" : "-mt-28 opacity-10"}>
         <NavBar />
       </div>
-      <div>
+      <div id="top">
         <LandingPage/>
       </div>
       <div id="about">
@@ -37,8 +39,14 @@ const Home = () => {
       <div id="experience">
         <Experience/>
       </div>
+      <div id="work">
+        <Work/>
+      </div>
       <div id="contact">
         <Contact/>
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );

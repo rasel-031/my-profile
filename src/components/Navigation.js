@@ -18,7 +18,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="flex items-center justify-between font-mono font-bold">
+    <div className="flex items-center justify-between font-mono">
       <div className="flex items-center justify-between text-customLight">
         <div className="px-4 hover:text-customGreen">
           <span className="text-customGreen">1.</span>

@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
 
   return (
-    <div className="bg-customBlue ">
+    <div className="bg-customBlue pt-32">
       <div className="flex flex-col items-center justify-center gap-4 pb-32 mx-[10vw] md:mx-[15vw] xl:mx-[30vw]">
         <div className="flex gap-3 text-customGreen text-sm md:text-lg">
           <span>04.</span>

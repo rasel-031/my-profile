@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { works } from "../utils/workData";
+import { experience } from "../utils/experienceData";
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState(works[0].name);
-  const [activeTabData, setActiveTabData] = useState(works[0]);
+  const [activeTab, setActiveTab] = useState(experience[0].name);
+  const [activeTabData, setActiveTabData] = useState(experience[0]);
 
   const handleTabClick = (activeTabName) => {
     setActiveTab(activeTabName);
   };
 
   useEffect(() => {
-    setActiveTabData(works.find((item) => item.name === activeTab));
+    setActiveTabData(experience.find((item) => item.name === activeTab));
   }, [activeTab]);
 
   return (
@@ -24,7 +24,7 @@ const Experience = () => {
       </div>
       <div className="pt-16 flex flex-col gap-10 sm:flex sm:flex-row sm:gap-6 sm:justify-start">
         <div className="flex overflow-x-auto sm:flex sm:flex-col sm:overflow-x-hidden">
-          {works.map((items) => (
+          {experience.map((items) => (
             <div
               key={items.id}
               className={`flex flex-col sm:flex-row cursor-pointer hover:bg-customNavy hover:text-customGreen  ${

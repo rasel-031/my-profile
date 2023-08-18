@@ -53,7 +53,7 @@ const NavDrawer = ({ onChildToggleClick }) => {
             </button>
           </div>
 
-          <div className="flex flex-col items-center justify-center h-[90vh] font-mono font-bold">
+          <div className="flex flex-col items-center justify-center h-[90vh] font-mono">
             <div className="flex flex-col items-center justify-between gap-6 text-customLight">
               <div className="flex flex-col items-center px-4 hover:text-customGreen">
                 <span className="text-customGreen">1.</span>

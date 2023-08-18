@@ -14,12 +14,15 @@ const NavBar = () => {
     setIsOpen(false);
   };
 
-  const scrollToTop = () => {
-    setIsOpen(false);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const targetSection = document.querySelector(sectionId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -28,7 +31,7 @@ const NavBar = () => {
         <div className="font-mono font-bold text-customLight flex justify-center">
           <a
             href="#top"
-            onClick={scrollToTop}
+            onClick={(e) => scrollToSection(e, "#top")}
             className=" flex items-center justify-center w-8 h-8 md:w-10 md:h-10 transform rotate-45 rounded outline outline-2 outline-customGreen"
           >
             <span className="transform -rotate-45 font-sans text-sm md:text-xl text-customGreen">
