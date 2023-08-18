@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { experience } from "../utils/experienceData";
+import { PiPaperPlaneRightThin } from "react-icons/pi";
 
 const Experience = () => {
   const [activeTab, setActiveTab] = useState(experience[0].name);
@@ -74,7 +75,10 @@ const Experience = () => {
               </div>
               <div className="flex flex-col gap-3 text-sm sm:text-base">
                 {activeTabData.works.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <div key={index} className="flex items-center gap-2">
+                    <p><PiPaperPlaneRightThin className="text-customGreen"/></p>
+                    <p>{item}</p>
+                  </div>
                 ))}
               </div>
             </div>

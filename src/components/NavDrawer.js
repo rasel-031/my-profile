@@ -40,8 +40,7 @@ const NavDrawer = ({ onChildToggleClick }) => {
   };
 
   return (
-    <div className="flex">
-      <div className="w-[100vh] h-[100vh]  bg-customNavy opacity-80"></div>
+    <div>
       <OutsideClickHandler onOutsideClick={onChildToggleClick}>
         <div className="w-56 h-[100vh] bg-customBlue transition duration-500 ease-in-out">
           <div className="flex items-center justify-end p-4">

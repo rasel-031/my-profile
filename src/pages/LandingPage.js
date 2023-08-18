@@ -1,6 +1,20 @@
 import React from "react";
 
 const LandingPage = () => {
+
+  //section code
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+  
+    const targetSection = document.querySelector(sectionId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="flex items-center bg-customBlue text-customLight pt-20 h-[100vh]">
       <div className="flex flex-col px-[15vw] md:px-[20vw] gap-8">
@@ -20,9 +34,11 @@ const LandingPage = () => {
         <div className="flex items-start">
           {/* osthir button start*/}
           <div className=" transition-transform transform translate-y-0 translate-x-0 bg-customGreen rounded">
-            <button className="px-4 py-2 truncate md:px-6 md:py-4 font-mono  text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1">
+            <a href="#work" onClick={(e) => scrollToSection(e, "#work")} >
+              <button className="px-4 py-2 truncate md:px-6 md:py-4 font-mono  text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1">
               Check out my work!
-            </button>
+              </button>
+            </a>
           </div>
           {/* osthir button end*/}
         </div>

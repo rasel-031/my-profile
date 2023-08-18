@@ -1,6 +1,7 @@
 import React from "react";
 import pp from "../assets/images/rasel.jpg";
 import { about } from "../utils/aboutData";
+import { CiStar } from "react-icons/ci";
 
 const About = () => {
   return (
@@ -28,12 +29,30 @@ const About = () => {
             <div className="flex gap-6">
               <div>
                 {about.technologies.map((item, index) => (
-                  <div key={index}>{index % 2 === 0 && <li>{item}</li>}</div>
+                  <div key={index}>
+                    {index % 2 === 0 && (
+                      <div className="flex items-center gap-2">
+                        <p>
+                          <CiStar className="text-customGreen" />
+                        </p>
+                        <p className="truncate">{item}</p>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
               <div>
                 {about.technologies.map((item, index) => (
-                  <div key={index}>{(index + 1) % 2 === 0 && <li>{item}</li>}</div>
+                  <div key={index}>
+                    {(index + 1) % 2 === 0 && (
+                      <div className="flex items-center gap-2">
+                        <p>
+                          <CiStar className="text-customGreen" />
+                        </p>
+                        <p className="truncate">{item}</p>
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>

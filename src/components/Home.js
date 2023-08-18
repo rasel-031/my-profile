@@ -27,26 +27,32 @@ const Home = () => {
 
   return (
     <div className="bg-customBlue">
-      <div className={showNavbar ? "fixed z-40 right-0 left-0 opacity-90 transition transform duration-300 ease-in-out shadow-xl" : "-mt-28 opacity-10"}>
+      <div
+        className={
+          showNavbar
+            ? "fixed z-40 top-0 right-0 left-0 opacity-90 shadow-xl"
+            : "hidden"
+        }
+      >
         <NavBar />
       </div>
       <div id="top">
-        <LandingPage/>
+        <LandingPage />
       </div>
       <div id="about">
-        <About/>
+        <About />
       </div>
       <div id="experience">
-        <Experience/>
+        <Experience />
       </div>
       <div id="work">
-        <Work/>
+        <Work />
       </div>
       <div id="contact">
-        <Contact/>
+        <Contact />
       </div>
       <div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

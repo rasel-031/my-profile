@@ -21,7 +21,7 @@ const Work = () => {
   }, [showFull]);
 
   return (
-    <div className="text-customSlate pt-32 px-[6vw] 2xl:px-[15vw] bg-customBlue flex flex-col items-center gap-20">
+    <div className="text-customSlate px-[6vw] 2xl:px-[15vw] bg-customBlue flex flex-col items-center gap-20">
       <div className="flex items-center">
         <p className="flex-none text-customGreen text-lg sm:text-2xl font-mono">
           03.

@@ -7,7 +7,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(true);
   };
 
   const toggleMenuClose = () => {
@@ -45,11 +45,6 @@ const NavBar = () => {
             <IoIosMenu />
           </button>
         </div>
-
-        {/* right drawer */}
-        <div className={isOpen ? "fixed z-50 top-0 right-0 " : "hidden"}>
-          <NavDrawer onChildToggleClick={toggleMenuClose} />
-        </div>
         {/* for mobile screen */}
 
         {/* for tablet to upper screen */}
@@ -57,6 +52,16 @@ const NavBar = () => {
           <Navigation />
         </div>
         {/* for tablet to upper screen */}
+      </div>
+      {/* right drawer */}
+      <div
+        className={
+          isOpen
+            ? "fixed z-50 top-0 right-0 bg-customNavy w-full flex justify-end visible transition ease-in-out duration-500 transform translate-x-0"
+            : "fixed z-50 top-0 right-0 invisible transform translate-x-full opacity-10 transition-opacity ease-in-out duration-500"
+        }
+      >
+        <NavDrawer onChildToggleClick={toggleMenuClose} />
       </div>
     </div>
   );
