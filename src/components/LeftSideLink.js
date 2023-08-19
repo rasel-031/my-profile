@@ -6,7 +6,7 @@ import { CiTwitter } from "react-icons/ci";
 
 const LeftSideLink = () => {
   return (
-    <div className="h-[100vh] w-[10vw] flex items-end justify-center fixed z-50 bottom-0 left-0">
+    <div className="h-[100vh] w-[10vw] flex items-end justify-center fixed z-40 bottom-0 left-0">
       <div className="text-customSlate flex flex-col items-center justify-center gap-6">
         <div className="">
           <a

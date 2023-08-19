@@ -28,7 +28,7 @@ const NavBar = () => {
   return (
     <div>
       <div className="flex items-center justify-between px-[10vw] md:px-16 py-5 bg-customBlue ">
-        <div className="font-mono font-bold text-customLight flex justify-center">
+        <div className="font-mono font-bold text-customLight flex justify-center ">
           <a
             href="#top"
             onClick={(e) => scrollToSection(e, "#top")}

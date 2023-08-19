@@ -33,7 +33,7 @@ const Home = () => {
       <div
         className={
           showNavbar
-            ? "fixed z-40 top-0 right-0 left-0 opacity-90 shadow-xl"
+            ? "fixed z-50 top-0 right-0 left-0 opacity-90 shadow-xl"
             : "hidden"
         }
       >
