@@ -21,7 +21,7 @@ const Work = () => {
   }, [showFull]);
 
   return (
-    <div className="text-customSlate px-[6vw] 2xl:px-[15vw] bg-customBlue flex flex-col items-center gap-20">
+    <div className="text-customSlate px-[8vw] sm:px-[2vw] md:px-[5vw] lg:px-[8vw] 2xl:px-[15vw] bg-customBlue flex flex-col items-center gap-20">
       <div className="flex items-center">
         <p className="flex-none text-customGreen text-lg sm:text-2xl font-mono">
           03.
@@ -36,7 +36,7 @@ const Work = () => {
         {showWork.map((item) => (
           <div
             key={item.id}
-            className="max-w-[340px] sm:max-w-[280px] md:max-w-[340px] lg:max-w-[280px] xl:max-w-[340px] grow flex flex-col justify-between gap-6 bg-customNavy px-6 py-7 rounded hover:transition duration-300 ease-in-out  hover:-translate-y-2"
+            className="sm:max-w-[280px] md:max-w-[300px] lg:max-w-[270px] xl:max-w-[340px] grow flex flex-col justify-between gap-6 bg-customNavy px-6 py-7 rounded hover:transition duration-300 ease-in-out  hover:-translate-y-2"
           >
             <div className="flex flex-col gap-5">
               <div className="flex items-center justify-between">

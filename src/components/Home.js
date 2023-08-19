@@ -7,6 +7,9 @@ import Contact from "../pages/Contact";
 import Experience from "../pages/Experience";
 import Work from "../pages/Work";
 import Footer from "../pages/Footer";
+import LeftSideLink from "./LeftSideLink";
+import RightSideLink from "./RightSideLink";
+import SocialLinkMobile from "../pages/SocialLinkMobile";
 
 const Home = () => {
   const [showNavbar, setShowNavbar] = useState(true);
@@ -26,7 +29,7 @@ const Home = () => {
   });
 
   return (
-    <div className="bg-customBlue">
+    <div className="bg-customBlue flex felx-row justify-between">
       <div
         className={
           showNavbar
@@ -36,23 +39,34 @@ const Home = () => {
       >
         <NavBar />
       </div>
-      <div id="top">
-        <LandingPage />
+      <div className="hidden md:flex">
+        <LeftSideLink />
       </div>
-      <div id="about">
-        <About />
+      <div className="flex flex-col bg-customBlue">
+        <div id="top">
+          <LandingPage />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="experience">
+          <Experience />
+        </div>
+        <div id="work">
+          <Work />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <div className="visible md:hidden">
+          <SocialLinkMobile/>
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
-      <div id="experience">
-        <Experience />
-      </div>
-      <div id="work">
-        <Work />
-      </div>
-      <div id="contact">
-        <Contact />
-      </div>
-      <div>
-        <Footer />
+      <div className="hidden md:flex">
+        <RightSideLink/>
       </div>
     </div>
   );
