@@ -75,8 +75,8 @@ const Experience = () => {
               </div>
               <div className="flex flex-col gap-3 text-sm sm:text-base">
                 {activeTabData.works.map((item, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <p><PiPaperPlaneRightThin className="text-customGreen"/></p>
+                  <div key={index} className="flex items-start gap-2">
+                    <p className="pt-1"><PiPaperPlaneRightThin className="text-customGreen"/></p>
                     <p>{item}</p>
                   </div>
                 ))}
