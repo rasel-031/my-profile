@@ -1,11 +1,11 @@
 import React from "react";
+import { Typewriter } from "react-simple-typewriter";
 
 const LandingPage = () => {
-
   //section code
   const scrollToSection = (e, sectionId) => {
     e.preventDefault();
-  
+
     const targetSection = document.querySelector(sectionId);
     if (targetSection) {
       window.scrollTo({
@@ -22,7 +22,17 @@ const LandingPage = () => {
           <span>Hi, my name is</span>
         </div>
         <div className="text-3xl md:text-5xl font-bold flex flex-col gap-4">
-          <h1>Rasel Bishwas.</h1>
+          <h1>
+            <Typewriter
+              words={["Rasel Bishwas!"]}
+              cursor
+              cursorStyle="_"
+              loop = {false}
+              typeSpeed={150}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </h1>
           <h1 className="text-customSlate">I build things for the web.</h1>
         </div>
         <div className="text-customSlate text-base">
@@ -34,9 +44,9 @@ const LandingPage = () => {
         <div className="flex items-start">
           {/* osthir button start*/}
           <div className=" transition-transform transform translate-y-0 translate-x-0 bg-customGreen rounded">
-            <a href="#work" onClick={(e) => scrollToSection(e, "#work")} >
+            <a href="#work" onClick={(e) => scrollToSection(e, "#work")}>
               <button className="px-4 py-2 truncate md:px-6 md:py-4 font-mono  text-customGreen bg-customBlue outline outline-1 rounded transform hover:-translate-y-1 hover:-translate-x-1">
-              Check out my work!
+                Check out my work!
               </button>
             </a>
           </div>
